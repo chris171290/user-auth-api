@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - 5434:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=nest
